@@ -8,7 +8,7 @@
 import Foundation
 
 // Immutable Struct
-struct TaskModel: Identifiable {
+struct TaskModel: Identifiable, Codable {
     let id: String
     let title: String
     let isChecked: Bool

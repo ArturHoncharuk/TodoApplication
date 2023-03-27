@@ -18,6 +18,7 @@
 		FAC268F829D070EA00DCC3BC /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC268F729D070EA00DCC3BC /* NewTaskView.swift */; };
 		FAC268FB29D0775D00DCC3BC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC268FA29D0775D00DCC3BC /* TaskModel.swift */; };
 		FAC268FE29D07D0F00DCC3BC /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC268FD29D07D0F00DCC3BC /* ListViewModel.swift */; };
+		FAC2690029D1DAA200DCC3BC /* EmptyTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC268FF29D1DAA200DCC3BC /* EmptyTasksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		FAC268F729D070EA00DCC3BC /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		FAC268FA29D0775D00DCC3BC /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		FAC268FD29D07D0F00DCC3BC /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		FAC268FF29D1DAA200DCC3BC /* EmptyTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTasksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				FAC268F329D06B8600DCC3BC /* ListView.swift */,
 				FAC268F529D06D4200DCC3BC /* ListRowView.swift */,
 				FAC268F729D070EA00DCC3BC /* NewTaskView.swift */,
+				FAC268FF29D1DAA200DCC3BC /* EmptyTasksView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				FAC268FE29D07D0F00DCC3BC /* ListViewModel.swift in Sources */,
 				FAC268FB29D0775D00DCC3BC /* TaskModel.swift in Sources */,
 				FAC268F429D06B8600DCC3BC /* ListView.swift in Sources */,
+				FAC2690029D1DAA200DCC3BC /* EmptyTasksView.swift in Sources */,
 				FAC268F629D06D4200DCC3BC /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
