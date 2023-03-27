@@ -30,4 +30,22 @@ class ListViewModel: ObservableObject {
     func moveItem(from: IndexSet, to: Int) {
         items.move(fromOffsets: from, toOffset: to)
     }
+    
+    func pushItem(title: String) {
+        let newItem = TaskModel(title: title, isChecked: false)
+        items.append(newItem)
+    }
+    
+    func updateItem(item: TaskModel) {
+        
+//        if let idx = items.firstIndex { (existingItem) -> Bool in
+//            return existingItem.id == item.id
+//        } {
+//            // run this code
+//        }
+        
+        if let idx = items.firstIndex(where: { $0.id == item.id }) {
+            items[idx] = item.updateCompletion()
+        }
+    }
 }

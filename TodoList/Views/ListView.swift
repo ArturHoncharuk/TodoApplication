@@ -9,19 +9,20 @@ import SwiftUI
 
 struct ListView: View {
     
-    @State var items: [TaskModel] = [
-        TaskModel(title: "First task", isChecked: false),
-        TaskModel(title: "Second task", isChecked: true),
-        TaskModel(title: "Third task", isChecked: false),
-    ]
-    
+    @EnvironmentObject var listViewModal: ListViewModel
+   
     var body: some View {
         List {
-            ForEach(items) {
+            ForEach(listViewModal.items) {
                 item in ListRowView(item: item)
+                    .onTapGesture {
+                        withAnimation(.linear) {
+                            listViewModal.updateItem(item: item)
+                        }
+                    }
             }
-            .onDelete(perform: deleteItem)
-            .onMove(perform: moveItem)
+            .onDelete(perform: listViewModal.deleteItem)
+            .onMove(perform: listViewModal.moveItem)
         }
         .listStyle(PlainListStyle())
         .navigationTitle("Todo List 📝")
@@ -31,14 +32,6 @@ struct ListView: View {
                 NavigationLink("Add", destination: NewTaskView())
         )
     }
-    
-    func deleteItem(indexSet: IndexSet) {
-        items.remove(atOffsets: indexSet)
-    }
-    
-    func moveItem(from: IndexSet, to: Int) {
-        items.move(fromOffsets: from, toOffset: to)
-    }
 }
 
 struct ListView_Previews: PreviewProvider {
@@ -46,5 +39,6 @@ struct ListView_Previews: PreviewProvider {
         NavigationView {
             ListView()
         }
+        .environmentObject(ListViewModel())
     }
 }
